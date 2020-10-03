@@ -1,0 +1,106 @@
+/* 전체 영역을 통틀어서 스타일 정의*/
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+:root {
+  /* Color */
+  --black-color: #000000;
+  --grey-color: #484848;
+  --dark-grey-color: #212121;
+  --light-grey-color: #e0e0e0;
+}
+
+* {
+  font-family: 'Roboto Slab';
+}
+
+a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bbbbbb;
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+/* 내비게이션 영역*/
+.navbar-default {
+  /* 배경 색상 */
+  background-color: var(--black-color);
+  border-color: var(--black-color);
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-brand {
+  /* 내비게이션 제목 색상 */
+  color: var(--light-grey-color);
+}
+
+.navbar-nav > li {
+  padding-left: 40px;
+}
+
+.dropdown-menu {
+  margin-left: 40px;
+}
+
+/* Logo */
+.navbar-default i {
+  color: var(--light-grey-color);
+  font-size: 30px;
+  padding-top: 10px;
+  padding-right: 20px;
+  float: left;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:foucs {
+  /* 내비게이션 제목에 마우스를 올렸을 때 */
+  background-color: transparent;
+  color: #bbbbbb;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  /* 현재 선택된 내비게이션 색상 이벤트 */
+  color: white;
+  background-color: var(--black-color);
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  /* 내비게이션의 글자에 마우스를 올렸을 때 */
+  color: #bbbbbb;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  /* 드랍다운이 열렸을 때 마우스 색상 이벤트 */
+  color: var(--black-color);
+  background-color: white;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  /*내비게이션 기본 색상*/
+  color: white;
+}
+
+/* Footer */
+.col-sm-14 {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  /* 해상도가 작을 때 드랍다운 아이템에 마우스를 올렸을 때 */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: white;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #bbbbbb;
+  }
+}
